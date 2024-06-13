@@ -26,7 +26,7 @@ exports.addExpense = async (req, res) => {
     console.log(expense)
 }
 
-exports.getExpense = async (req, res) => {
+exports.getExpenses = async (req, res) => {
     try{
       const expenses = await expenseSchema.find().sort({createdAt: -1 })
       res.status(200).json(expenses)
